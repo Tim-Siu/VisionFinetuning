@@ -20,6 +20,8 @@ conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvi
 
 conda install matplotlib -y
 
+pip install pycocotools
+
 wget https://www.cis.upenn.edu/~jshi/ped_html/PennFudanPed.zip -P /temp/data
 
 cd temp/data && unzip PennFudanPed.zip
