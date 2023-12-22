@@ -3,7 +3,7 @@ import torch
 
 from torchvision.io import read_image
 from torchvision.ops.boxes import masks_to_boxes
-from torchvision.transforms.functional import tv_tensors
+from torchvision import tv_tensors
 from torchvision.transforms.v2 import functional as F
 
 class PennFudanDataset(torch.utils.data.Dataset):
