@@ -74,6 +74,10 @@ for epoch in range(num_epochs):
     # evaluate on the test dataset
     evaluate(model, data_loader_test, device=device)
 
+model_save_path = os.path.join(save_path, "model.pth")
+
+torch.save(model.state_dict(), model_save_path)
+
 # pick one image from the test set
 # image_path = "/temp/data/PennFudanPed/PNGImages/FudanPed00046.png"
 image_path = os.path.join(data_root, "PNGImages", dataset_test.imgs[0])
