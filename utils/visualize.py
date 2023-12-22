@@ -1,7 +1,8 @@
 import torch
 import matplotlib.pyplot as plt
 from torchvision.utils import draw_bounding_boxes, draw_segmentation_masks
-from utils.transforms import get_transform, read_image
+from models.transform import get_transform
+from torchvision.io import read_image
 
 def visualize_model(model, device, image_path, output_path):
     model.eval()

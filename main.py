@@ -6,12 +6,14 @@ import utils.utils as utils
 from configs.paths_config import data_root, save_path
 from datasets.penn_fudan import PennFudanDataset
 from models.PFNet import get_model_instance_segmentation
+from models.transform import get_transform
 from utils.engine import evaluate, train_one_epoch
-from utils.transforms import get_transform
 from utils.visualize import visualize_model
+from models.transform import get_transform
 
 # train on the GPU or on the CPU, if a GPU is not available
 device = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
+
 
 # our dataset has two classes only - background and person
 num_classes = 2

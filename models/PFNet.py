@@ -26,3 +26,4 @@ def get_model_instance_segmentation(num_classes):
     )
     
     return model
+
