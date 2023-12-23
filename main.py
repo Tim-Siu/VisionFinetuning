@@ -81,7 +81,7 @@ torch.save(model.state_dict(), model_save_path)
 
 # pick one image from the test set
 # image_path = "/temp/data/PennFudanPed/PNGImages/FudanPed00046.png"
-image_path = os.path.join(data_root, "PNGImages", dataset_test.imgs[0])
+image_path = os.path.join(data_root, "PNGImages00046.png")
 # output_path = "~/3/plot.png"
 output_path = os.path.join(save_path, "plot.png")
 visualize_model(model, device, image_path, output_path)
