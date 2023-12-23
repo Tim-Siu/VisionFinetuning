@@ -1,3 +1,17 @@
+#!/bin/bash
+
+# SLURM job script to check allocated resources and software environment
+
+#SBATCH --job-name=finetune
+#SBATCH --output=finetune.out
+#SBATCH --error=finetune.err
+#SBATCH --comment="Finetune Mask R-CNN"
+#SBATCH --partition=medium
+#SBATCH --time=179
+#SBATCH --mail-type=BEGIN,END,FAIL
+#SBATCH --mail-user=safes.boas0z@icloud.com
+#SBATCH --gpus=titanrtx:1
+
 nvidia-smi
 
 cd /temp
@@ -34,4 +48,6 @@ rm -rf VisionFinetunings
 
 git clone https://github.com/Tim-Siu/VisionFinetuning.git
 
+cd VisionFinetuning
 
+python3 main.py
